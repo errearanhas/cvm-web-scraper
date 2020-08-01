@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cfeecb34-5ac1-4679-8922-cdaa18b16ab1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cPhnrX8SnU3rnTX6djnjJCtDAh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="matheus_project" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="matheus_project" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cfeecb34-5ac1-4679-8922-cdaa18b16ab1" name="Default Changelist" comment="" />
+      <created>1590436305803</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590436305803</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="221" y="89" width="1113" height="722" key="SettingsEditor" timestamp="1590464248927">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" width="1113" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1590464248927" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1596155616236">
+      <screen x="0" y="23" width="1440" height="826" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.826@0.23.1440.826" timestamp="1596155616236" />
+    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1596158445718">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1596158445718" />
+    <state width="720" height="413" key="XDebugger.FullValuePopup/0.23.1440.826@0.23.1440.826" timestamp="1596153805438" />
+    <state x="65" y="269" key="com.intellij.ide.util.TipDialog" timestamp="1594768026931">
+      <screen x="0" y="23" width="1440" height="826" />
+    </state>
+    <state x="65" y="268" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1594090102742" />
+    <state x="65" y="269" key="com.intellij.ide.util.TipDialog/0.23.1440.826@0.23.1440.826" timestamp="1594768026931" />
+    <state x="46" y="163" width="670" height="737" key="search.everywhere.popup" timestamp="1594094086369">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="46" y="163" width="670" height="737" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1594094086369" />
+    <state x="46" y="173" width="670" height="676" key="search.everywhere.popup/0.23.1440.826@0.23.1440.826" timestamp="1593925659834" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../portaltransparenciamacae/04_curlCnpjContratos.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
