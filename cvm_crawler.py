@@ -73,7 +73,7 @@ for cnpj in tqdm(lista_cnpjs):
 
         # create folder with company name
         company_name = unidecode.unidecode(str(company_link.text))
-        path = "./folder/{}".format(company_name)
+        path = "./companies_data/{}".format(company_name)
         # path = 'C:\\Users\\Owner\\Desktop\\DFs\\{}'.format(company_name)
 
         if os.path.exists(path):
