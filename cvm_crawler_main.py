@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from tqdm import tqdm
@@ -20,18 +20,18 @@ lista_cnpjs = df['CNPJ']
 # prepare a list to log non captured cnpjs
 lista_cnpjs_non_cap = []
 
-
 # set driver options and open url
 options = webdriver.ChromeOptions()
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-gpu')
-# options.add_argument('--headless')
+options.add_argument('--headless')
 
 driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 # driver = webdriver.Chrome("C:\\Users\\Owner\\PycharmProjects\\RicardoCardoso25052020\\chromedriver.exe", options=options)
 
 url = 'https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/CiaAb/FormBuscaCiaAb.aspx?TipoConsult=c'
 driver.get(url)
+
 
 # rmdir * 2> /dev/null
 def select_option(elemid, option_text):
@@ -40,7 +40,7 @@ def select_option(elemid, option_text):
     :param elemid: html element ID of menu
     :param option_text: name of option to select
     """
-    elem = WebDriverWait(driver, 300).until(EC.presence_of_element_located((By.ID, elemid)))
+    elem = WebDriverWait(driver, 300).until(ec.presence_of_element_located((By.ID, elemid)))
     drop = Select(elem)
     drop.select_by_visible_text(option_text)
     time.sleep(10)
@@ -54,10 +54,11 @@ def change_window(link):
     """
     handles = driver.window_handles  # get previous number of windows
     link.click()
-    WebDriverWait(driver, 300).until(EC.new_window_is_opened(handles))  # wait for new window up to 300 seconds
+    WebDriverWait(driver, 300).until(ec.new_window_is_opened(handles))  # wait for new window up to 300 seconds
     time.sleep(5)
     new_window = driver.window_handles[1]
     driver.switch_to.window(new_window)  # change control to new window
+    time.sleep(5)
     return
 
 
@@ -70,11 +71,15 @@ for cnpj in tqdm(lista_cnpjs):
 
         cont = driver.find_element_by_id('btnContinuar')
         cont.click()
+        time.sleep(2)
 
         company_link = driver.find_element_by_id('dlCiasCdCVM__ctl1_Linkbutton1')
 
         # create folder with company name
         company_name = unidecode.unidecode(str(company_link.text))
+        company_name = company_name.replace(".", "").replace("/", "").replace("-",
+                                                                              "")  # remove punctuation from company name
+
         path = "./companies_data/{}".format(company_name)
         # path = 'C:\\Users\\Owner\\Desktop\\DFs\\{}'.format(company_name)
 
@@ -138,7 +143,7 @@ for cnpj in tqdm(lista_cnpjs):
 
                 # choose 'Balanço Patrimonial Ativo' and switch to iframe
                 select_option('cmbQuadro', 'Balanço Patrimonial Ativo')
-                WebDriverWait(driver, 60).until(EC.frame_to_be_available_and_switch_to_it("iFrameFormulariosFilho"))
+                WebDriverWait(driver, 60).until(ec.frame_to_be_available_and_switch_to_it("iFrameFormulariosFilho"))
 
                 # get 'Balanço Patrimonial Ativo' DataFrame
                 page = BeautifulSoup(driver.page_source, 'lxml')
@@ -150,7 +155,7 @@ for cnpj in tqdm(lista_cnpjs):
 
                 # choose 'Balanço Patrimonial Passivo' and switch to iframe
                 select_option('cmbQuadro', 'Balanço Patrimonial Passivo')
-                WebDriverWait(driver, 60).until(EC.frame_to_be_available_and_switch_to_it("iFrameFormulariosFilho"))
+                WebDriverWait(driver, 60).until(ec.frame_to_be_available_and_switch_to_it("iFrameFormulariosFilho"))
 
                 # get 'Balanço Patrimonial Passivo' DataFrame
                 page = BeautifulSoup(driver.page_source, 'lxml')
@@ -162,7 +167,7 @@ for cnpj in tqdm(lista_cnpjs):
 
                 # choose 'Demonstração do Resultado' and switch to iframe
                 select_option('cmbQuadro', 'Demonstração do Resultado')
-                WebDriverWait(driver, 60).until(EC.frame_to_be_available_and_switch_to_it("iFrameFormulariosFilho"))
+                WebDriverWait(driver, 60).until(ec.frame_to_be_available_and_switch_to_it("iFrameFormulariosFilho"))
 
                 # get 'Demonstração do Resultado' DataFrame
                 page = BeautifulSoup(driver.page_source, 'lxml')
@@ -185,6 +190,7 @@ for cnpj in tqdm(lista_cnpjs):
                 csv_name = '/' + '{}'.format(year) + '.csv'
                 new_df.to_csv(path2 + csv_name)
                 time.sleep(5)
+
                 # close current window and change driver control to first window
                 driver.close()
                 time.sleep(5)
@@ -195,9 +201,8 @@ for cnpj in tqdm(lista_cnpjs):
                 continue
 
         driver.get(url)
+        time.sleep(5)
     except:
         lista_cnpjs_non_cap.append(current_cnpj)
         driver.get(url)
         continue
-
-display.stop()

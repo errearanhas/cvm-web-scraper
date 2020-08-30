@@ -11,6 +11,7 @@ configparser==5.0.0
 crayons==0.3.0
 decorator==4.4.2
 defusedxml==0.6.0
+EasyProcess==0.3
 entrypoints==0.3
 html5lib==1.0.1
 idna==2.9
