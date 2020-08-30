@@ -1,0 +1,285 @@
+,Conta,Descrição,31/12/2013,31/12/2012,31/12/2011,01/01/2013 a 31/12/2013,01/01/2012 a 31/12/2012,01/01/2011 a 31/12/2011
+0,1,Ativo Total,333.31300000000005,254.63,291.499,,,
+1,1.01,Ativo Circulante,191.47299999999998,172.19099999999997,143.842,,,
+2,1.01.01,Caixa e Equivalentes de Caixa,8.92,23.796999999999997,15.027999999999999,,,
+3,1.01.01.01,Caixas e equivalentes de Caixa,8.92,23.796999999999997,15.027999999999999,,,
+4,1.01.02,Aplicações Financeiras,4.09,1.3430000000000002,6.358,,,
+5,1.01.02.01,Aplicações Financeiras Avaliadas a Valor Justo,4.09,1.3430000000000002,6.358,,,
+6,1.01.02.01.01,Títulos para Negociação,4.09,1.3430000000000002,6.358,,,
+7,1.01.02.01.02,Títulos Disponíveis para Venda,,,,,,
+8,1.01.02.02,Aplicações Financeiras Avaliadas ao Custo Amortizado,,,,,,
+9,1.01.02.02.01,Títulos Mantidos até o Vencimento,,,,,,
+10,1.01.03,Contas a Receber,146.768,105.31299999999999,73.785,,,
+11,1.01.03.01,Clientes,146.768,105.31299999999999,73.785,,,
+12,1.01.03.02,Outras Contas a Receber,,,,,,
+13,1.01.04,Estoques,12.423,14.001,19.082,,,
+14,1.01.05,Ativos Biológicos,,,,,,
+15,1.01.06,Tributos a Recuperar,1.935,5.6129999999999995,716.0,,,
+16,1.01.06.01,Tributos Correntes a Recuperar,1.935,5.6129999999999995,716.0,,,
+17,1.01.06.01.01,Impostos a recuperar,1.935,5.6129999999999995,716.0,,,
+18,1.01.07,Despesas Antecipadas,318.0,316.0,389.0,,,
+19,1.01.07.01,Despesas antecipadas,318.0,316.0,389.0,,,
+20,1.01.08,Outros Ativos Circulantes,17.019000000000002,21.808000000000003,28.484,,,
+21,1.01.08.01,Ativos Não-Correntes a Venda,,,,,,
+22,1.01.08.02,Ativos de Operações Descontinuadas,0.0,0.0,15.665,,,
+23,1.01.08.02.01,Ativos de operações descontinuadas,0.0,0.0,2.6069999999999998,,,
+24,1.01.08.02.02,Bens destinados a venda,0.0,0.0,13.058,,,
+25,1.01.08.03,Outros,17.019000000000002,21.808000000000003,12.819,,,
+26,1.01.08.03.01,Adiantamentos diversos,3.696,4.553,2.855,,,
+27,1.01.08.03.02,Operações entre empresas ligadas,,,,,,
+28,1.01.08.03.03,Dividendos a receber,0.0,0.0,6.349,,,
+29,1.01.08.03.04,Devedores diversos,13.323,17.255,3.615,,,
+30,1.02,Ativo Não Circulante,141.84,82.439,147.657,,,
+31,1.02.01,Ativo Realizável a Longo Prazo,47.605,14.220999999999998,14.288,,,
+32,1.02.01.01,Aplicações Financeiras Avaliadas a Valor Justo,12.728,0.0,0.0,,,
+33,1.02.01.01.01,Títulos para Negociação,12.728,0.0,0.0,,,
+34,1.02.01.01.02,Títulos Disponíveis para Venda,,,,,,
+35,1.02.01.02,Aplicações Financeiras Avaliadas ao Custo Amortizado,,,,,,
+36,1.02.01.02.01,Títulos Mantidos até o Vencimento,,,,,,
+37,1.02.01.03,Contas a Receber,0.0,0.0,147.0,,,
+38,1.02.01.03.01,Clientes,,,,,,
+39,1.02.01.03.02,Outras Contas a Receber,0.0,0.0,147.0,,,
+40,1.02.01.04,Estoques,,,,,,
+41,1.02.01.05,Ativos Biológicos,,,,,,
+42,1.02.01.06,Tributos Diferidos,22.715,0.0,141.0,,,
+43,1.02.01.06.01,Imposto de Renda e Contribuição Social Diferidos,22.715,0.0,141.0,,,
+44,1.02.01.07,Despesas Antecipadas,,,,,,
+45,1.02.01.08,Créditos com Partes Relacionadas,4.109,113.0,11.96,,,
+46,1.02.01.08.01,Créditos com Coligadas,4.109,113.0,11.96,,,
+47,1.02.01.08.02,Créditos com Controladas,,,,,,
+48,1.02.01.08.03,Créditos com Controladores,,,,,,
+49,1.02.01.08.04,Créditos com Outras Partes Relacionadas,,,,,,
+50,1.02.01.09,Outros Ativos Não Circulantes,8.052999999999999,14.107999999999999,2.04,,,
+51,1.02.01.09.01,Ativos Não-Correntes a Venda,,,,,,
+52,1.02.01.09.02,Ativos de Operações Descontinuadas,,,,,,
+53,1.02.01.09.03,Outros créditos,4.758,6.075,127.0,,,
+54,1.02.01.09.04,Depósitos judiciais,3.065,1.5859999999999999,1.5090000000000001,,,
+55,1.02.01.09.07,Impostos a recuperar,80.0,98.0,404.0,,,
+56,1.02.01.09.08,Dividendos a receber,0.0,6.349,0.0,,,
+57,1.02.01.09.09,Adiantamento p/futuro aumento de capital,150.0,0.0,0.0,,,
+58,1.02.02,Investimentos,81.72800000000001,51.924,116.46799999999999,,,
+59,1.02.02.01,Participações Societárias,81.72800000000001,51.924,116.46799999999999,,,
+60,1.02.02.01.01,Participações em Coligadas,81.726,51.922,116.46600000000001,,,
+61,1.02.02.01.02,Participações em Controladas,,,,,,
+62,1.02.02.01.03,Participações em Controladas em Conjunto,,,,,,
+63,1.02.02.01.04,Outras Participações Societárias,2.0,2.0,2.0,,,
+64,1.02.02.02,Propriedades para Investimento,,,,,,
+65,1.02.03,Imobilizado,12.277999999999999,16.02,16.482,,,
+66,1.02.03.01,Imobilizado em Operação,12.277999999999999,16.02,16.482,,,
+67,1.02.03.01.02,Terrenos,744.0,870.0,870.0,,,
+68,1.02.03.01.03,Imóveis,6.438,12.685,12.571,,,
+69,1.02.03.01.04,"Móveis, utensílios e ferramentas",6.3839999999999995,5.831,5.3660000000000005,,,
+70,1.02.03.01.05,Computadores e periféricos,3.55,3.458,3.3680000000000003,,,
+71,1.02.03.01.06,Benfeitorias em bens de terceiros,3.199,2.34,1.97,,,
+72,1.02.03.01.07,Máquinas e Equipamentos,3.135,2.8739999999999997,2.799,,,
+73,1.02.03.01.08,Veículos,598.0,805.0,783.0,,,
+74,1.02.03.01.15,Outras imobilizações técnicas,1.3730000000000002,1.276,1.2690000000000001,,,
+75,1.02.03.01.16,"(-) Depreciação, amortização e exaustão",-13.142999999999999,-14.119000000000002,-12.514000000000001,,,
+76,1.02.03.02,Imobilizado Arrendado,,,,,,
+77,1.02.03.03,Imobilizado em Andamento,,,,,,
+78,1.02.04,Intangível,229.0,274.0,419.0,,,
+79,1.02.04.01,Intangíveis,229.0,274.0,419.0,,,
+80,1.02.04.01.01,Contrato de Concessão,,,,,,
+81,1.02.04.01.02,Marcas de fábrica,45.0,37.0,36.0,,,
+82,1.02.04.01.03,Software,2.126,2.0140000000000002,1.94,,,
+83,1.02.04.01.04,( - ) Amortização,-1.942,-1.777,-1.557,,,
+84,1.02.05,Diferido,,,,,,
+85,2,Passivo Total,333.31300000000005,254.63,291.499,,,
+86,2.01,Passivo Circulante,265.323,194.895,183.67,,,
+87,2.01.01,Obrigações Sociais e Trabalhistas,5.922000000000001,4.4030000000000005,4.7669999999999995,,,
+88,2.01.01.01,Obrigações Sociais,2.092,1.166,1.183,,,
+89,2.01.01.01.01,Obrigações sociais,2.092,1.166,1.183,,,
+90,2.01.01.02,Obrigações Trabalhistas,3.83,3.237,3.5839999999999996,,,
+91,2.01.01.02.01,Obrigações trabalhistas,3.83,3.237,3.5839999999999996,,,
+92,2.01.02,Fornecedores,6.841,9.298,3.804,,,
+93,2.01.02.01,Fornecedores Nacionais,6.841,9.298,3.804,,,
+94,2.01.02.02,Fornecedores Estrangeiros,,,,,,
+95,2.01.03,Obrigações Fiscais,4.444,6.007999999999999,2.987,,,
+96,2.01.03.01,Obrigações Fiscais Federais,2.161,4.652,1.919,,,
+97,2.01.03.01.01,Imposto de Renda e Contribuição Social a Pagar,717.0,2.6510000000000002,0.0,,,
+98,2.01.03.01.02,Refis - programa de recuperação fiscal,419.0,390.0,582.0,,,
+99,2.01.03.01.03,Outras obrigações federais,1.025,1.611,1.337,,,
+100,2.01.03.02,Obrigações Fiscais Estaduais,2.165,1.2790000000000001,999.0,,,
+101,2.01.03.03,Obrigações Fiscais Municipais,118.0,77.0,69.0,,,
+102,2.01.04,Empréstimos e Financiamentos,214.69799999999998,149.898,149.045,,,
+103,2.01.04.01,Empréstimos e Financiamentos,197.857,139.873,134.186,,,
+104,2.01.04.01.01,Em Moeda Nacional,197.857,139.873,134.186,,,
+105,2.01.04.01.02,Em Moeda Estrangeira,,,,,,
+106,2.01.04.02,Debêntures,16.840999999999998,10.025,14.859000000000002,,,
+107,2.01.04.02.01,Debêntures,16.840999999999998,10.025,14.859000000000002,,,
+108,2.01.04.03,Financiamento por Arrendamento Financeiro,,,,,,
+109,2.01.05,Outras Obrigações,9.767000000000001,12.097000000000001,21.34,,,
+110,2.01.05.01,Passivos com Partes Relacionadas,,,,,,
+111,2.01.05.01.01,Débitos com Coligadas,,,,,,
+112,2.01.05.01.02,Débitos com Controladas,,,,,,
+113,2.01.05.01.03,Débitos com Controladores,,,,,,
+114,2.01.05.01.04,Débitos com Outras Partes Relacionadas,,,,,,
+115,2.01.05.02,Outros,9.767000000000001,12.097000000000001,21.34,,,
+116,2.01.05.02.01,Dividendos e JCP a Pagar,,,,,,
+117,2.01.05.02.02,Dividendo Mínimo Obrigatório a Pagar,0.0,303.0,303.0,,,
+118,2.01.05.02.03,Obrigações por Pagamentos Baseados em Ações,,,,,,
+119,2.01.05.02.04,Credores diversos,5.862,6.295,16.087,,,
+120,2.01.05.02.05,Adiantamentos de clientes,3.905,5.499,4.95,,,
+121,2.01.05.02.06,Indenizações judiciais a pagar,,,,,,
+122,2.01.06,Provisões,23.651,13.190999999999999,1.7269999999999999,,,
+123,2.01.06.01,Provisões Fiscais Previdenciárias Trabalhistas e Cíveis,,,,,,
+124,2.01.06.01.01,Provisões Fiscais,,,,,,
+125,2.01.06.01.02,Provisões Previdenciárias e Trabalhistas,,,,,,
+126,2.01.06.01.03,Provisões para Benefícios a Empregados,,,,,,
+127,2.01.06.01.04,Provisões Cíveis,,,,,,
+128,2.01.06.01.05,Provisões para passivo a descoberto,,,,,,
+129,2.01.06.02,Outras Provisões,23.651,13.190999999999999,1.7269999999999999,,,
+130,2.01.06.02.01,Provisões para Garantias,,,,,,
+131,2.01.06.02.02,Provisões para Reestruturação,,,,,,
+132,2.01.06.02.03,Provisões para Passivos Ambientais e de Desativação,,,,,,
+133,2.01.06.02.04,Outras provisões,,,,,,
+134,2.01.06.02.05,Provisão para passivo a descoberto,23.651,13.190999999999999,1.7269999999999999,,,
+135,2.01.07,Passivos sobre Ativos Não-Correntes a Venda e Descontinuados,,,,,,
+136,2.01.07.01,Passivos sobre Ativos Não-Correntes a Venda,,,,,,
+137,2.01.07.02,Passivos sobre Ativos de Operações Descontinuadas,,,,,,
+138,2.02,Passivo Não Circulante,105.198,125.04899999999999,138.99,,,
+139,2.02.01,Empréstimos e Financiamentos,77.37899999999999,95.665,122.44,,,
+140,2.02.01.01,Empréstimos e Financiamentos,17.924,16.579,18.725,,,
+141,2.02.01.01.01,Em Moeda Nacional,17.924,16.579,18.725,,,
+142,2.02.01.01.02,Em Moeda Estrangeira,,,,,,
+143,2.02.01.02,Debêntures,59.455,79.086,103.715,,,
+144,2.02.01.02.01,Debêntures,59.455,79.086,103.715,,,
+145,2.02.01.03,Financiamento por Arrendamento Financeiro,,,,,,
+146,2.02.02,Outras Obrigações,17.945999999999998,18.168,12.675,,,
+147,2.02.02.01,Passivos com Partes Relacionadas,,,,,,
+148,2.02.02.01.01,Débitos com Coligadas,,,,,,
+149,2.02.02.01.02,Débitos com Controladas,,,,,,
+150,2.02.02.01.03,Débitos com Controladores,,,,,,
+151,2.02.02.01.04,Débitos com Outras Partes Relacionadas,,,,,,
+152,2.02.02.02,Outros,17.945999999999998,18.168,12.675,,,
+153,2.02.02.02.01,Obrigações por Pagamentos Baseados em Ações,,,,,,
+154,2.02.02.02.02,Adiantamento para Futuro Aumento de Capital,,,,,,
+155,2.02.02.02.03,Credores diversos,9.121,10.637,7.26,,,
+156,2.02.02.02.04,Refis - Programa de recuperação fiscal,6.247000000000001,2.904,3.08,,,
+157,2.02.02.02.05,Outras obrigações federais,,,,,,
+158,2.02.02.02.06,Parcelamentos federais,0.0,1.9180000000000001,2.335,,,
+159,2.02.02.02.07,Parcelamentos estaduais,2.5780000000000003,2.7089999999999996,0.0,,,
+160,2.02.03,Tributos Diferidos,27.0,12.0,96.0,,,
+161,2.02.03.01,Imposto de Renda e Contribuição Social Diferidos,27.0,12.0,96.0,,,
+162,2.02.04,Provisões,9.846,11.204,3.779,,,
+163,2.02.04.01,Provisões Fiscais Previdenciárias Trabalhistas e Cíveis,9.846,11.204,3.779,,,
+164,2.02.04.01.01,Provisões Fiscais,,,,,,
+165,2.02.04.01.02,Provisões Previdenciárias e Trabalhistas,1.806,1.714,1.7,,,
+166,2.02.04.01.03,Provisões para Benefícios a Empregados,,,,,,
+167,2.02.04.01.04,Provisões Cíveis,2.536,2.3040000000000003,1.18,,,
+168,2.02.04.01.05,Provisões Tributárias,5.504,7.186,899.0,,,
+169,2.02.04.02,Outras Provisões,,,,,,
+170,2.02.04.02.01,Provisões para Garantias,,,,,,
+171,2.02.04.02.02,Provisões para Reestruturação,,,,,,
+172,2.02.04.02.03,Provisões para Passivos Ambientais e de Desativação,,,,,,
+173,2.02.05,Passivos sobre Ativos Não-Correntes a Venda e Descontinuados,,,,,,
+174,2.02.05.01,Passivos sobre Ativos Não-Correntes a Venda,,,,,,
+175,2.02.05.02,Passivos sobre Ativos de Operações Descontinuadas,,,,,,
+176,2.02.06,Lucros e Receitas a Apropriar,,,,,,
+177,2.02.06.01,Lucros a Apropriar,,,,,,
+178,2.02.06.02,Receitas a Apropriar,,,,,,
+179,2.02.06.03,Subvenções de Investimento a Apropriar,,,,,,
+180,2.03,Patrimônio Líquido,-37.208,-65.314,-31.160999999999998,,,
+181,2.03.01,Capital Social Realizado,151.556,151.556,151.556,,,
+182,2.03.01.01,Capital nacional,138.69799999999998,138.69799999999998,138.69799999999998,,,
+183,2.03.01.02,Capital estrangeiro,12.857999999999999,12.857999999999999,12.857999999999999,,,
+184,2.03.02,Reservas de Capital,1.244,1.254,1.254,,,
+185,2.03.02.01,Ágio na Emissão de Ações,,,,,,
+186,2.03.02.02,Reserva Especial de Ágio na Incorporação,,,,,,
+187,2.03.02.03,Alienação de Bônus de Subscrição,,,,,,
+188,2.03.02.04,Opções Outorgadas,,,,,,
+189,2.03.02.05,Ações em Tesouraria,,,,,,
+190,2.03.02.06,Adiantamento para Futuro Aumento de Capital,,,,,,
+191,2.03.02.07,Reservas de ágio,1.244,1.254,1.254,,,
+192,2.03.03,Reservas de Reavaliação,,,,,,
+193,2.03.04,Reservas de Lucros,2.261,19.094,19.094,,,
+194,2.03.04.01,Reserva Legal,1.675,1.675,1.675,,,
+195,2.03.04.02,Reserva Estatutária,,,,,,
+196,2.03.04.03,Reserva para Contingências,,,,,,
+197,2.03.04.04,Reserva de Lucros a Realizar,,,,,,
+198,2.03.04.05,Reserva de Retenção de Lucros,0.0,16.833,16.833,,,
+199,2.03.04.06,Reserva Especial para Dividendos Não Distribuídos,586.0,586.0,586.0,,,
+200,2.03.04.07,Reserva de Incentivos Fiscais,,,,,,
+201,2.03.04.08,Dividendo Adicional Proposto,,,,,,
+202,2.03.04.09,Ações em Tesouraria,,,,,,
+203,2.03.05,Lucros/Prejuízos Acumulados,-192.269,-237.218,-203.065,,,
+204,2.03.06,Ajustes de Avaliação Patrimonial,,,,,,
+205,2.03.07,Ajustes Acumulados de Conversão,,,,,,
+206,2.03.08,Outros Resultados Abrangentes,,,,,,
+207,3.01,Receita de Venda de Bens e/ou Serviços,,,,1.121.087,694.071,57.775
+208,3.02,Custo dos Bens e/ou Serviços Vendidos,,,,-1.003.444,-617.0219999999999,-51.583999999999996
+209,3.03,Resultado Bruto,,,,117.643,77.04899999999999,6.191
+210,3.04,Despesas/Receitas Operacionais,,,,-67.517,-61.11,-12.821
+211,3.04.01,Despesas com Vendas,,,,-27.784,-17.570999999999998,-3.458
+212,3.04.01.01,Despesas com salários e encargos,,,,-8.778,-6.183,-541.0
+213,3.04.01.02,Despesas com comissão e corretagem,,,,-6.155,-3.7960000000000003,-523.0
+214,3.04.01.03,Despesas com propaganda e publicidade,,,,-1.186,-1.044,-502.0
+215,3.04.01.04,Despesas com revisões e garantias,,,,-1.037,-504.0,-97.0
+216,3.04.01.05,Despesas com entregas e embarques,,,,-2.547,-2.378,-308.0
+217,3.04.01.06,Despesas com manutenção e conservação,,,,-130,-179.0,-12.0
+218,3.04.01.07,"Despesas com aluguéis, condomínios e segurança",,,,-1.006,-323.0,-2.0
+219,3.04.01.08,Despesas com bonificações,,,,-1.187,-1.735,-237.0
+220,3.04.01.09,Despesas com impostos e taxas,,,,-3.765,-17.0,-1.0
+221,3.04.01.10,Despesas com prejuízo na realização de crédito,,,,-7,-919.0,-1.227
+222,3.04.01.11,Despesas com provisão p/crédito de liq duvidosa,,,,-377,0.0,0.0
+223,3.04.01.12,Despesas com fretes e carretos,,,,-210,0.0,0.0
+224,3.04.01.20,Outras despesas comerciais,,,,-1.399,-493.0,-8.0
+225,3.04.02,Despesas Gerais e Administrativas,,,,-53.779,-66.152,-6.51
+226,3.04.02.01,Salários e encargos,,,,-26.367,-26.125999999999998,-2.657
+227,3.04.02.02,Depreciação,,,,-2.264,-1.588,-144.0
+228,3.04.02.03,Impostos taxas e contribuições,,,,-1.145,-3.167,-95.0
+229,3.04.02.04,Honorários profissionais pessoa jurídica,,,,-5.970,-14.185,-1.645
+230,3.04.02.05,Legalizações,,,,-288,-175.0,-78.0
+231,3.04.02.06,"Provisões para riscos fiscais, trabalhistas e civeis",,,,,,
+232,3.04.02.07,Viagens,,,,-1.661,-1.8159999999999998,-186.0
+233,3.04.02.08,Manutenção e conservação,,,,-4.570,-4.276,-405.0
+234,3.04.02.09,Outras despesas gerais e administrativas,,,,-2.428,-2.138,-548.0
+235,3.04.02.10,Despesas contratuais,,,,,,
+236,3.04.02.11,Honorários a administradores,,,,,,
+237,3.04.02.12,Aluguéis e condomínios,,,,-5.909,-5.877000000000001,-442.0
+238,3.04.02.13,Comunicações,,,,-1.403,-1.272,-104.0
+239,3.04.02.14,Publicações,,,,-135,-209.0,-119.0
+240,3.04.02.15,Despesas com veículos,,,,-1.111,-1.046,-87.0
+241,3.04.02.16,Despesas com representações,,,,-520,-623.0,0.0
+242,3.04.02.17,Despesas com brindes e doações,,,,-8,-69.0,0.0
+243,3.04.02.18,Despesas com prejuízo na realização de crédito,,,,0,-3.585,0.0
+244,3.04.03,Perdas pela Não Recuperabilidade de Ativos,,,,,,
+245,3.04.04,Outras Receitas Operacionais,,,,36.007,2.214,577.0
+246,3.04.04.01,Recuperação despesas gerais e administrativas,,,,1.609,39.0,450.0
+247,3.04.04.02,Reversão de provisões,,,,4.652,0.0,0.0
+248,3.04.04.03,Receita alienação imobilizado,,,,27.743,1.074,53.0
+249,3.04.04.04,Receita alienação investimento,,,,,,
+250,3.04.04.05,Outras receitas operacionais,,,,2.003,1.101,74.0
+251,3.04.04.06,Ganhos de participações,,,,,,
+252,3.04.05,Outras Despesas Operacionais,,,,-14.102,-15.49,-260.0
+253,3.04.05.01,Despesas alienação imobilizado,,,,-9.005,-6.0,0.0
+254,3.04.05.02,Outras despesas operacionais,,,,-471,-6.632000000000001,-10.0
+255,3.04.05.03,Multas,,,,-601,-29.0,-2.0
+256,3.04.05.04,Despesa alienação/baixa investimentos,,,,-45,-1.3980000000000001,-51.0
+257,3.04.05.05,Despesas com provisões,,,,-3.980,-7.425,-197.0
+258,3.04.06,Resultado de Equivalência Patrimonial,,,,-7.859,35.889,-3.17
+259,3.05,Resultado Antes do Resultado Financeiro e dos Tributos,,,,50.126,15.939,-6.63
+260,3.06,Resultado Financeiro,,,,-52.769,-47.483999999999995,-32.355
+261,3.06.01,Receitas Financeiras,,,,2.142,4.905,4.138999999999999
+262,3.06.01.01,Receita financeira,,,,1.985,4.13,1.713
+263,3.06.01.02,Variação cambial positiva,,,,157,775.0,2.426
+264,3.06.02,Despesas Financeiras,,,,-54.911,-52.388999999999996,-36.494
+265,3.06.02.01,Despesa financeira,,,,-54.559,-51.335,-34.87
+266,3.06.02.02,Variação cambial negativa,,,,-352,-1.054,-1.624
+267,3.07,Resultado Antes dos Tributos sobre o Lucro,,,,-2.643,-31.545,-38.985
+268,3.08,Imposto de Renda e Contribuição Social sobre o Lucro,,,,30.118,-2.636,-1.444
+269,3.08.01,Corrente,,,,-718,-2.6510000000000002,-24.0
+270,3.08.02,Diferido,,,,30.836,15.0,-1.42
+271,3.09,Resultado Líquido das Operações Continuadas,,,,27.475,-34.181,-40.429
+272,3.10,Resultado Líquido de Operações Descontinuadas,,,,0,28.0,-7.497000000000001
+273,3.10.01,Lucro/Prejuízo Líquido das Operações Descontinuadas,,,,0,28.0,-7.497000000000001
+274,3.10.01.01,Prejuízo das operações descontinuadas,,,,0,28.0,-7.497000000000001
+275,3.10.02,Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas,,,,,,
+276,3.11,Lucro/Prejuízo do Período,,,,27.475,-34.153,-47.926
+277,3.99,Lucro por Ação - (Reais / Ação),,,,,,
+278,3.99.01,Lucro Básico por Ação,,,,,,
+279,3.99.01.01,ON,,,,055047,-68426.0,-96021.0
+280,3.99.01.02,PN,,,,027539,-34233.0,-48038.0
+281,3.99.02,Lucro Diluído por Ação,,,,,,
+282,3.99.02.01,ON,,,,055047,-68426.0,-96021.0
+283,3.99.02.02,PN,,,,027539,-34233.0,-48038.0

@@ -1,0 +1,199 @@
+,Conta,Descrição,31/12/2017,31/12/2016,31/12/2015,01/01/2017 a 31/12/2017,01/01/2016 a 31/12/2016,01/01/2015 a 31/12/2015
+0,1,Ativo Total,6.937.364,6.337.473,5.269.067,,,
+1,1.01,Ativo Circulante,4.230.493,3.811.743,2.957.887,,,
+2,1.01.01,Disponibilidades,139.793,138.761,169.858,,,
+3,1.01.02,Aplicações Interfinanceiras de Liquidez,1.294.598,1.341.883,730.100,,,
+4,1.01.02.01,Aplicações no mercado Aberto,942.592,970.729,543.911,,,
+5,1.01.02.02,Aplicações em Depósitos Interfinanceiros,352.006,371.154,186.189,,,
+6,1.01.02.03,Aplicações em Moeda Estrangeira,,,,,,
+7,1.01.03,Títulos e Valores Mobiliários,816.115,568.550,477.905,,,
+8,1.01.03.01,Carteira Própria,775.114,161.457,340.110,,,
+9,1.01.03.02,Vinculados a Compra e Recompra,33.577,400.349,131.874,,,
+10,1.01.03.03,Vinculados ao Banco Central,,,,,,
+11,1.01.03.04,Instrumentos Financeiros Derivativos,,,,,,
+12,1.01.03.05,Vinculados a Prestação de Garantias,7.424,6.744,5.921,,,
+13,1.01.04,Relações Interfinanceiras,177.198,80.005,77.328,,,
+14,1.01.04.01,Pagamentos e Recebimentos a Liquidar,163,0,3,,,
+15,1.01.04.02,Depósitos no Banco Central,76.328,79.147,76.467,,,
+16,1.01.04.03,SFH - Sistema Financeiro de Habitação,,,,,,
+17,1.01.04.04,Correspondentes,100.707,858,858,,,
+18,1.01.05,Relações Interdependências,,,,,,
+19,1.01.06,Operações de Crédito,1.556.122,1.441.190,1.326.013,,,
+20,1.01.06.01,Setor Público,,,,,,
+21,1.01.06.02,Setor Privado,1.612.770,1.503.074,1.393.614,,,
+22,1.01.06.03,(Provisão para Crédito de Liquidação Duvidosa),-56.648,-61.884,-67.601,,,
+23,1.01.07,Operações de Arrendamento Mercantil,,,,,,
+24,1.01.08,Outros Créditos,241.031,236.504,172.102,,,
+25,1.01.08.01,Carteira de Câmbio,670,994,73,,,
+26,1.01.08.02,Rendas a Receber,964,1.027,1.211,,,
+27,1.01.08.03,Negociações e Intermediações de Valores,,,,,,
+28,1.01.08.04,Diversos,243.843,237.698,176.802,,,
+29,1.01.08.05,(Provisão p/ Outros Créditos de Liquidação Duvidosa),-4.446,-3.215,-5.984,,,
+30,1.01.09,Outros Valores e Bens,5.636,4.850,4.581,,,
+31,1.01.09.01,Outros Valores e Bens,3.442,3.383,3.443,,,
+32,1.01.09.02,(Provisão para Desvalorização),-1.508,-1.521,-1.441,,,
+33,1.01.09.03,Despesas Antecipadas,3.702,2.988,2.579,,,
+34,1.02,Ativo Realizável a Longo Prazo,2.549.245,2.399.961,2.192.610,,,
+35,1.02.01,Aplicações Interfinanceiras de Liquidez,,,,,,
+36,1.02.02,Títulos e Valores Mobiliários,125.497,138.184,147.872,,,
+37,1.02.02.01,Carteira Própria,125.497,138.184,147.872,,,
+38,1.02.02.02,Vinculados a Compromisso de Recompra,,,,,,
+39,1.02.02.03,Vinculados a Prestação de Garantias,,,,,,
+40,1.02.03,Relações Interfinanceiras,55.827,58.204,55.313,,,
+41,1.02.03.01,SFH - Sistema Financeiro de Habitação,55.827,58.204,55.313,,,
+42,1.02.04,Relações Interdependências,,,,,,
+43,1.02.05,Operações de Crédito,2.115.516,2.003.357,1.835.006,,,
+44,1.02.05.01,Setor Público,,,,,,
+45,1.02.05.02,Setor Privado,2.192.528,2.087.305,1.925.920,,,
+46,1.02.05.05,(Provisão para Crédito de Liquidação Duvidosa),-77.012,-83.948,-90.914,,,
+47,1.02.06,Operações de Arrendamento Mercantil,,,,,,
+48,1.02.07,Outros Créditos,252.405,200.216,154.419,,,
+49,1.02.07.01,Diversos,252.405,200.216,154.419,,,
+50,1.02.08,Outros Valores e Bens,,,,,,
+51,1.03,Ativo Permanente,157.626,125.769,118.570,,,
+52,1.03.01,Investimentos,33,33,33,,,
+53,1.03.01.01,Dependências no Exterior,,,,,,
+54,1.03.01.02,Participações em Controladas,,,,,,
+55,1.03.01.03,Participações em Coligadas e Equiparadas,,,,,,
+56,1.03.01.04,Outros Investimentos,171,171,171,,,
+57,1.03.01.04.01,Outros Investimentos,167,167,167,,,
+58,1.03.01.04.02,No Exterior,4,4,4,,,
+59,1.03.01.05,Provisão para Perdas,-138,-138,-138,,,
+60,1.03.02,Imobilizado de Uso,71.044,51.692,57.534,,,
+61,1.03.02.01,Imóveis de Uso,46.198,46.198,46.147,,,
+62,1.03.02.02,Outras Imobilizações de Uso,135.324,105.530,102.311,,,
+63,1.03.02.03,(Depreciações Acumuladas),-110.478,-100.036,-90.924,,,
+64,1.03.03,Imobilizado de Arrendamento,,,,,,
+65,1.03.04,Intangível,86.549,74.044,61.003,,,
+66,1.03.04.01,Outros Ativos Intangíveis,66.716,62.222,44.512,,,
+67,1.03.04.02,(Amortização Acumulada - Intangível),-35.301,-24.152,-15.437,,,
+68,1.03.04.03,Intangível em curso,55.134,35.974,31.928,,,
+69,1.03.05,Diferido,,,,,,
+70,1.03.05.01,Gastos de Organização e Expansão,,,,,,
+71,1.03.05.02,(Amortização Acumulada),,,,,,
+72,2,Passivo Total,6.937.364,6.337.473,5.269.067,,,
+73,2.01,Passivo Circulante,4.564.918,4.428.189,4.144.549,,,
+74,2.01.01,Depósitos,4.186.381,3.411.395,3.316.101,,,
+75,2.01.01.01,Depósitos a Vista,642.204,618.872,944.231,,,
+76,2.01.01.02,Depósitos de Poupança,880.562,825.400,813.598,,,
+77,2.01.01.03,Depósitos Interfinanceiros,558.066,602.638,147.410,,,
+78,2.01.01.04,Depósitos a Prazo,2.105.549,1.364.485,1.410.862,,,
+79,2.01.01.05,Outros Depósitos,,,,,,
+80,2.01.02,Captações no Mercado Aberto,33.537,685.079,443.383,,,
+81,2.01.02.01,Carteira de Terceiros,0,400.039,312.059,,,
+82,2.01.02.02,Carteira Própria,33.537,285.040,131.324,,,
+83,2.01.03,Recursos de Aceites e Emissão de Títulos,12.462,56.234,177.531,,,
+84,2.01.03.01,Recursos de Letras Hipotecárias,12.462,56.234,177.531,,,
+85,2.01.03.02,Recursos de Letras Imobiliárias,,,,,,
+86,2.01.04,Relações Interfinanceiras,162,201,201,,,
+87,2.01.04.01,Recebimentos e Pagamentos a Liquidar,162,0,0,,,
+88,2.01.04.02,Correspondentes,0,201,201,,,
+89,2.01.05,Relações Interdependências,887,267,671,,,
+90,2.01.05.01,Recursos em Trânsito de Terceiros,887,267,671,,,
+91,2.01.05.02,Transferências Internas de Recursos,,,,,,
+92,2.01.06,Obrigações por Empréstimos,666,978,0,,,
+93,2.01.07,Obrigações por Repasse do País,151,499,847,,,
+94,2.01.08,Obrigações por Repasse do Exterior,,,,,,
+95,2.01.09,Outras Obrigações,330.672,273.536,205.815,,,
+96,2.01.09.01,Cobrança e Arrecadação de Tributos e Assemelhados,1.474,2.165,1.972,,,
+97,2.01.09.02,Sociais e Estatutárias,21.444,40.870,15.473,,,
+98,2.01.09.03,Fiscais e Previdenciárias,33.478,27.100,28.737,,,
+99,2.01.09.04,Negociação e Intermediação de Valores,,,,,,
+100,2.01.09.05,Diversas,274.276,203.401,159.633,,,
+101,2.02,Passivo Exigível a Longo Prazo,1.347.542,1.078.657,432.756,,,
+102,2.02.01,Depósitos,1.260.915,1.068.243,374.348,,,
+103,2.02.01.01,Depósitos a Prazo,1.260.915,1.068.243,374.348,,,
+104,2.02.02,Captações no Mercado Aberto,,,,,,
+105,2.02.03,Recursos de Aceites e Emissão de Títulos,86.627,10.414,48.596,,,
+106,2.02.03.01,Recursos de Letras imobiliárias,86.627,10.414,48.596,,,
+107,2.02.04,Relações Interfinanceiras,,,,,,
+108,2.02.05,Relações Interdependências,,,,,,
+109,2.02.06,Obrigações por Empréstimos,,,,,,
+110,2.02.07,Obrigações por Repasse do País,,,,,,
+111,2.02.08,Obrigações por Repasse do Exterior,,,,,,
+112,2.02.09,Outras Obrigações,0,0,9.812,,,
+113,2.02.09.01,Diversas,0,0,9.812,,,
+114,2.03,Resultados de Exercícios Futuros,,,,,,
+115,2.05,Patrimônio Líquido,1.024.904,830.627,691.762,,,
+116,2.05.01,Capital Social Realizado,830.628,691.762,569.316,,,
+117,2.05.01.01,Ações Ordinárias - País,830.628,691.762,569.316,,,
+118,2.05.02,Reservas de Capital,,,,,,
+119,2.05.03,Reservas de Reavaliação,,,,,,
+120,2.05.03.01,Ativos Próprios,,,,,,
+121,2.05.03.02,Controladas/Coligadas e Equiparadas,,,,,,
+122,2.05.04,Reservas de Lucro,194.276,138.865,122.446,,,
+123,2.05.04.01,Legal,12.952,11.572,10.204,,,
+124,2.05.04.02,Estatutária,181.324,127.293,112.242,,,
+125,2.05.04.03,Para Contingências,,,,,,
+126,2.05.04.04,De Lucros a Realizar,,,,,,
+127,2.05.04.05,Retenção de Lucros,,,,,,
+128,2.05.04.06,Especial p/ Dividendos Não Distribuídos,,,,,,
+129,2.05.04.07,Outras Reservas de Lucro,,,,,,
+130,2.05.05,Ajustes de Avaliação Patrimonial,,,,,,
+131,2.05.05.01,Ajustes de Títulos e Valores Mobiliários,,,,,,
+132,2.05.05.02,Ajustes Acumulados de Conversão,,,,,,
+133,2.05.05.03,Ajustes de Combinação de Negócios,,,,,,
+134,2.05.06,Lucros/Prejuízos Acumulados,,,,,,
+135,3.01,Receitas da Intermediação Financeira,,,,1.564.464,1.465.880,1.338.987
+136,3.01.01,Operações de Crédito,,,,1.391.635,1.283.595,1.145.926
+137,3.01.02,Resultado de Oper. c/ Titulos e Valores Mobiliários,,,,160.700,173.868,174.563
+138,3.01.03,Resultado de Aplicações Compulsórias,,,,9.699,4.508,11.778
+139,3.01.04,Resultado de Operações de Câmbio,,,,2.430,3.909,6.720
+140,3.02,Despesas da Intermediação Financeira,,,,-450.138,-533.783,-542.462
+141,3.02.01,Despesas de Captação no Mercado,,,,-384.626,-458.262,-421.095
+142,3.02.02,Despesas de Empréstimos e Repasses,,,,-232,-63,-368
+143,3.02.03,Provisão para Crédito em Liquidação Duvidosa,,,,-65.280,-75.153,-120.215
+144,3.02.04,Resultado de Operações de Câmbio,,,,0,-305,-784
+145,3.03,Resultado Bruto Intermediação Financeira,,,,1.114.326,932.097,796.525
+146,3.04,Outras Despesas/Receitas Operacionais,,,,-754.473,-624.288,-509.229
+147,3.04.01,Receitas de Prestação de Serviços,,,,92.667,81.061,71.405
+148,3.04.02,Despesas de Pessoal,,,,-328.814,-303.129,-247.044
+149,3.04.03,Outras Despesas Administrativas,,,,-307.769,-276.322,-238.508
+150,3.04.03.01,Despesas de Água e Energia,,,,-9.028,-7.463,-7.069
+151,3.04.03.02,Despesas de Aluguéis,,,,-15.768,-11.858,-9.519
+152,3.04.03.03,Despesas de Comunicação,,,,-26.656,-22.822,-28.235
+153,3.04.03.04,Despesas de Manutenção e Conservação de Bens,,,,-9.824,-9.598,-6.418
+154,3.04.03.05,Despesas de Material,,,,-2.185,-2.079,-1.959
+155,3.04.03.06,Despesas de Processamento de Dados,,,,-78.073,-68.767,-44.958
+156,3.04.03.07,Despesas de Promoções e Relações Públicas,,,,-4.677,-5.263,-6.491
+157,3.04.03.08,Propaganda e Publicidade,,,,-12.723,-6.668,-7.076
+158,3.04.03.09,Publicações,,,,-952,-2.263,-1.134
+159,3.04.03.10,Despesas de Seguros,,,,-144,-205,0
+160,3.04.03.11,Serviços do Sistema Financeiro,,,,-35.055,-22.322,-13.995
+161,3.04.03.12,Despesas de Serviços de Terceiros,,,,-12.870,-23.708,-28.256
+162,3.04.03.13,Despesas de Serviços de Vigilância e Segurança,,,,-44.002,-38.937,-32.572
+163,3.04.03.14,Despesas de Serviços Técnicos Especializados,,,,-5.594,-9.387,-9.277
+164,3.04.03.15,Despesas de Transporte,,,,-18.406,-16.630,-15.114
+165,3.04.03.16,Viagem no País,,,,-1.083,-917,-868
+166,3.04.03.17,Honorários,,,,0,0,-2.010
+167,3.04.03.18,Outras Despesas Administrativas,,,,-30.470,-27.273,-23.557
+168,3.04.03.19,Contribuições Filantrópicas,,,,-259,-162,0
+169,3.04.04,Despesas Tributárias,,,,-64.484,-55.023,-48.581
+170,3.04.04.01,Desp. de Impostos s/ Serviços de Qualquer Natureza,,,,-4.644,-3.981,-3.471
+171,3.04.04.02,Despesas de Contribuições COFINS,,,,-50.476,-43.131,-38.216
+172,3.04.04.03,Despesas de Contribuições PIS/PASEP,,,,-8.202,-7.009,-6.189
+173,3.04.04.04,Outros,,,,,,
+174,3.04.04.05,Despesas Tributárias,,,,-1.162,-902,-705
+175,3.04.05,Outras Receitas Operacionais,,,,36.697,18.977,18.506
+176,3.04.05.01,Outras Receitas Operacionais,,,,36.697,18.977,18.506
+177,3.04.06,Outras Despesas Operacionais,,,,-182.770,-89.852,-65.007
+178,3.04.06.01,Outras Despesas Operacionais,,,,-182.770,-89.852,-65.007
+179,3.04.07,Resultado da Equivalência Patrimonial,,,,,,
+180,3.05,Resultado Operacional,,,,359.853,307.809,287.296
+181,3.06,Resultado Não Operacional,,,,-7.280,1.630,-615
+182,3.06.01,Receitas,,,,3.159,10.485,3.597
+183,3.06.01.01,Receitas Não Operacionais,,,,3.159,10.485,3.597
+184,3.06.02,Despesas,,,,-10.439,-8.855,-4.212
+185,3.06.02.01,Despesas Não Operacionais,,,,-10.439,-8.855,-4.212
+186,3.07,Resultado Antes Tributação/Participações,,,,352.573,309.439,286.681
+187,3.08,Provisão para IR e Contribuição Social,,,,-119.339,-98.203,-91.691
+188,3.08.01,Provisão para Imposto de Renda,,,,-96.403,-78.567,-87.089
+189,3.08.02,Provisão para Contribuição Social,,,,-85.154,-65.432,-58.031
+190,3.08.03,Ativo Diferido,,,,62.218,45.796,53.429
+191,3.09,IR Diferido,,,,,,
+192,3.10,Participações/Contribuições Estatutárias,,,,-33.379,-31.676,-26.486
+193,3.10.01,Participações,,,,-33.379,-31.676,-26.486
+194,3.10.02,Contribuições,,,,,,
+195,3.11,Reversão dos Juros sobre Capital Próprio,,,,59.180,51.882,35.573
+196,3.13,Lucro/Prejuízo do Período,,,,259.035,231.442,204.077
+197,3.99,Lucro por Ação - (R$ / Ação),,,,2720485,2430692,2143295
