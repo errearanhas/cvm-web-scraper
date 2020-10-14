@@ -31,10 +31,8 @@ url = 'https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/CiaAb/FormBuscaCiaAb.
 driver.get(url)
 
 # set local download folder
-downloadpath = '/Users/renatoaranha/downloads'
-
-
-# downloadpath = '/Users/rlopesc/downloads'
+# downloadpath = '/Users/renatoaranha/downloads'
+downloadpath = '/Users/rlopesc/downloads'
 
 
 def click_change_window(link):
