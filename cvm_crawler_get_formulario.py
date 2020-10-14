@@ -32,6 +32,8 @@ driver.get(url)
 
 # set local download folder
 downloadpath = '/Users/renatoaranha/downloads'
+
+
 # downloadpath = '/Users/rlopesc/downloads'
 
 
@@ -155,13 +157,6 @@ for cnpj in tqdm(lista_cnpjs):
         gerar_pdf = driver.find_element_by_id("btnConsulta")
         gerar_pdf.click()
         time.sleep(20)
-
-        # last_download = max([downloadpath + "/" + f for f in os.listdir(downloadpath)], key=os.path.getctime)
-        # if ".pdf" not in last_download:
-        #     time.sleep(5)
-        # else:
-        #     filename = re.sub('[^A-Za-z0-9]+', '', company_name)
-        #     shutil.move(last_download, os.path.join(path, filename + ".pdf"))
 
         # renaming file and moving it to pertinet folder
         fname = re.sub('[^A-Za-z0-9]+', '', company_name) + ".pdf"
