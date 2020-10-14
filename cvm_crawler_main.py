@@ -20,15 +20,16 @@ lista_cnpjs = df['CNPJ']
 # prepare a list to log non captured cnpjs
 lista_cnpjs_non_cap = []
 
-# set driver options and open url
+# set webdriver options
 options = webdriver.ChromeOptions()
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-gpu')
-options.add_argument('--headless')
+# options.add_argument('--headless')
 
 driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 # driver = webdriver.Chrome("C:\\Users\\Owner\\PycharmProjects\\RicardoCardoso25052020\\chromedriver.exe", options=options)
 
+# open url
 url = 'https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/CiaAb/FormBuscaCiaAb.aspx?TipoConsult=c'
 driver.get(url)
 
@@ -47,10 +48,10 @@ def select_option(elemid, option_text):
     return
 
 
-def change_window(link):
+def click_and_change_window(link):
     """
-    Switch driver control to the new window when clicking on a link that opens another window
-    :param link: link that opens the new window when clicked
+    Click on a link that opens a window and switch driver control to this new window
+    :param link: link that opens a new window
     """
     handles = driver.window_handles  # get previous number of windows
     link.click()
@@ -71,15 +72,14 @@ for cnpj in tqdm(lista_cnpjs):
 
         cont = driver.find_element_by_id('btnContinuar')
         cont.click()
-        time.sleep(2)
 
         company_link = driver.find_element_by_id('dlCiasCdCVM__ctl1_Linkbutton1')
 
-        # create folder with company name
+        # create folder with company name and remove punctuation from company name
         company_name = unidecode.unidecode(str(company_link.text))
-        company_name = company_name.replace(".", "").replace("/", "").replace("-",
-                                                                              "")  # remove punctuation from company name
+        company_name = company_name.replace(".", "").replace("/", "").replace("-", "")
 
+        # set path to save files and name it with company name
         path = "./companies_data/{}".format(company_name)
         # path = 'C:\\Users\\Owner\\Desktop\\DFs\\{}'.format(company_name)
 
@@ -91,6 +91,7 @@ for cnpj in tqdm(lista_cnpjs):
         company_link.click()
         time.sleep(10)
 
+        # set search filter options
         periodo = driver.find_element_by_id('rdPeriodo')
         periodo.click()
         time.sleep(5)
@@ -108,10 +109,9 @@ for cnpj in tqdm(lista_cnpjs):
         hr_final.send_keys('00:00')
         hr_final.click()
 
-        # Categoria
+        # get and set category options
         categ_options = driver.find_element_by_id('cboCategoria')
         options = [i.get_attribute('text') for i in categ_options.find_elements_by_tag_name('option')]
-
         categ = driver.find_element_by_class_name('chosen-single')
         categ.click()
         categ = driver.find_element_by_id('cboCategoria_chosen_input')
@@ -119,7 +119,6 @@ for cnpj in tqdm(lista_cnpjs):
         categ.send_keys(option)
         categ.send_keys(Keys.RETURN)
 
-        # Consulta
         consulta = driver.find_element_by_id('btnConsulta')
         consulta.click()
         time.sleep(5)
@@ -134,18 +133,17 @@ for cnpj in tqdm(lista_cnpjs):
 
         print('----> current company: ' + company_name)
 
+        # start iteration over company documents to download it
         for j in tqdm(visus):
             try:
-                change_window(j)
+                click_and_change_window(j)
 
-                # choose the DF individual option
+                # choose 'DFs Individuais' option
                 select_option('cmbGrupo', 'DFs Individuais')
 
-                # choose 'Balanço Patrimonial Ativo' and switch to iframe
+                # choose 'Balanço Patrimonial Ativo', switch to iframe and get dataframe
                 select_option('cmbQuadro', 'Balanço Patrimonial Ativo')
                 WebDriverWait(driver, 60).until(ec.frame_to_be_available_and_switch_to_it("iFrameFormulariosFilho"))
-
-                # get 'Balanço Patrimonial Ativo' DataFrame
                 page = BeautifulSoup(driver.page_source, 'lxml')
                 table = page.find('table', id='ctl00_cphPopUp_tbDados')
                 balanco_atv = pd.read_html(str(table), header=0)[0]
@@ -153,11 +151,9 @@ for cnpj in tqdm(lista_cnpjs):
                 # switch back to default content (out of iframe)
                 driver.switch_to.default_content()
 
-                # choose 'Balanço Patrimonial Passivo' and switch to iframe
+                # choose 'Balanço Patrimonial Passivo', switch to iframe and get dataframe
                 select_option('cmbQuadro', 'Balanço Patrimonial Passivo')
                 WebDriverWait(driver, 60).until(ec.frame_to_be_available_and_switch_to_it("iFrameFormulariosFilho"))
-
-                # get 'Balanço Patrimonial Passivo' DataFrame
                 page = BeautifulSoup(driver.page_source, 'lxml')
                 table = page.find('table', id='ctl00_cphPopUp_tbDados')
                 balanco_pass = pd.read_html(str(table), header=0)[0]
@@ -165,11 +161,9 @@ for cnpj in tqdm(lista_cnpjs):
                 # switch back to default content (out of iframe)
                 driver.switch_to.default_content()
 
-                # choose 'Demonstração do Resultado' and switch to iframe
+                # choose 'Demonstração do Resultado', switch to iframe and get dataframe
                 select_option('cmbQuadro', 'Demonstração do Resultado')
                 WebDriverWait(driver, 60).until(ec.frame_to_be_available_and_switch_to_it("iFrameFormulariosFilho"))
-
-                # get 'Demonstração do Resultado' DataFrame
                 page = BeautifulSoup(driver.page_source, 'lxml')
                 table = page.find('table', id='ctl00_cphPopUp_tbDados')
                 demonstra_res = pd.read_html(str(table), header=0)[0]

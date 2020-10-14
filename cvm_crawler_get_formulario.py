@@ -26,12 +26,13 @@ options.add_argument('--no-sandbox')
 options.add_argument('--disable-gpu')
 
 driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
-# driver = webdriver.Chrome("C:\\Users\\Owner\\PycharmProjects\\RicardoCardoso25052020\\chromedriver.exe", options=options)
 
 url = 'https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/CiaAb/FormBuscaCiaAb.aspx?TipoConsult=c'
 driver.get(url)
 
+# set local download folder
 downloadpath = '/Users/renatoaranha/downloads'
+# downloadpath = '/Users/rlopesc/downloads'
 
 
 def click_change_window(link):
@@ -81,13 +82,20 @@ for cnpj in tqdm(lista_cnpjs):
         time.sleep(5)
 
         dt_inicial = driver.find_element_by_id('txtDataIni')
+        dt_inicial.clear()
         dt_inicial.send_keys('04/01/2010')
 
         hr_inicial = driver.find_element_by_id('txtHoraIni')
+        hr_inicial.clear()
         hr_inicial.send_keys('00:00')
 
         dt_final = driver.find_element_by_id('txtDataFim')
+        dt_final.clear()
         dt_final.send_keys('22/05/2020')
+
+        dt_ref = driver.find_element_by_id('txtDataReferencia')
+        dt_ref.clear()
+        dt_ref.send_keys('01/01/2010')
 
         hr_final = driver.find_element_by_id('txtHoraFim')
         hr_final.send_keys('00:00')
@@ -109,22 +117,27 @@ for cnpj in tqdm(lista_cnpjs):
         consulta.click()
         time.sleep(5)
 
-        # selecting only documents with status "ATIVO" and Data Referência "2019"
+        # selecting only documents with status "ATIVO" and Data Referência "2020"
         page = BeautifulSoup(driver.page_source, 'lxml')
         tableid = page.find('table', id='grdDocumentos')
         fulltable = pd.read_html(str(tableid), header=0)[0]
         fulltable["year"] = fulltable["Data Referência"].apply(lambda x: x[-4:])
-        filtered_index = fulltable[(fulltable["Status"] == "Ativo") & (fulltable["year"] == "2019")].index
+        filtered_index = fulltable[fulltable["Status"] == "Ativo"].index
         visu = driver.find_element_by_id('VisualizarDocumento')
 
         click_change_window(visu)
 
         save_pdf = driver.find_element_by_id('btnGeraRelatorioPDF')
         save_pdf.click()
-        time.sleep(2)
+        time.sleep(5)
 
-        WebDriverWait(driver, 60).until(EC.frame_to_be_available_and_switch_to_it("iFrameModal"))
+        filename1 = driver.find_element_by_id("hdnNumeroSequencialDocumento").get_attribute("value")
+        filename2 = driver.find_element_by_id("hdnCodigoCvm").get_attribute("value")
+        filename_prefix = filename1 + "_" + filename2
 
+        wait = WebDriverWait(driver, 60).until(EC.frame_to_be_available_and_switch_to_it("iFrameModal"))
+
+        time.sleep(5)
         page = BeautifulSoup(driver.page_source, 'lxml')
         boxes = page.find_all("a")
 
@@ -143,12 +156,21 @@ for cnpj in tqdm(lista_cnpjs):
         gerar_pdf.click()
         time.sleep(20)
 
-        last_download = max([downloadpath + "/" + f for f in os.listdir(downloadpath)], key=os.path.getctime)
-        if ".pdf" not in last_download:
-            time.sleep(5)
-        else:
-            filename = re.sub('[^A-Za-z0-9]+', '', company_name)
-            shutil.move(last_download, os.path.join(path, filename + ".pdf"))
+        # last_download = max([downloadpath + "/" + f for f in os.listdir(downloadpath)], key=os.path.getctime)
+        # if ".pdf" not in last_download:
+        #     time.sleep(5)
+        # else:
+        #     filename = re.sub('[^A-Za-z0-9]+', '', company_name)
+        #     shutil.move(last_download, os.path.join(path, filename + ".pdf"))
+
+        # renaming file and moving it to pertinet folder
+        fname = re.sub('[^A-Za-z0-9]+', '', company_name) + ".pdf"
+        for i in os.listdir(downloadpath):
+            if filename_prefix in i:
+                shutil.move(downloadpath + "/" + i,
+                            os.path.join(path, fname))
+
+        time.sleep(5)
 
         # close current window and change driver control to first window
         driver.close()
