@@ -63,6 +63,13 @@ def click_and_change_window(link):
     return
 
 
+path0 = "./companies_data/"
+
+if os.path.exists(path0):
+    pass
+else:
+    os.mkdir(path0)
+
 for cnpj in tqdm(lista_cnpjs):
     current_cnpj = cnpj.replace(".", "").replace("/", "").replace("-", "")  # remove punctuation from cnpj
     try:
