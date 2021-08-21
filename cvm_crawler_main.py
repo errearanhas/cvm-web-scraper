@@ -84,7 +84,7 @@ for cnpj in tqdm(lista_cnpjs):
         # path = 'C:\\Users\\Owner\\Desktop\\DFs\\{}'.format(company_name)
 
         if os.path.exists(path):
-            continue
+            pass
         else:
             os.mkdir(path)
 
@@ -98,30 +98,37 @@ for cnpj in tqdm(lista_cnpjs):
 
         dt_inicial = driver.find_element_by_id('txtDataIni')
         dt_inicial.send_keys('04/01/2010')
+        periodo.click()
 
         hr_inicial = driver.find_element_by_id('txtHoraIni')
         hr_inicial.send_keys('00:00')
+        periodo.click()
 
         dt_final = driver.find_element_by_id('txtDataFim')
         dt_final.send_keys('22/05/2020')
+        periodo.click()
 
         hr_final = driver.find_element_by_id('txtHoraFim')
         hr_final.send_keys('00:00')
-        hr_final.click()
+        periodo.click()
 
         # get and set category options
-        categ_options = driver.find_element_by_id('cboCategoria')
+        # categ_options = driver.find_element_by_id('cboCategoria')
+        categ_options = driver.find_element_by_id('cboCategorias')
         options = [i.get_attribute('text') for i in categ_options.find_elements_by_tag_name('option')]
         categ = driver.find_element_by_class_name('chosen-single')
         categ.click()
-        categ = driver.find_element_by_id('cboCategoria_chosen_input')
-        option = [i for i in options if i == 'DFP'][0]
+        # categ = driver.find_element_by_id('cboCategoria_chosen_input')
+        categ = driver.find_element_by_class_name('chosen-search-input')
+        # option = [i for i in options if i == 'DFP'][0]
+        option = [i for i in options if 'DFP' in i][0]
+
         categ.send_keys(option)
         categ.send_keys(Keys.RETURN)
 
         consulta = driver.find_element_by_id('btnConsulta')
         consulta.click()
-        time.sleep(5)
+        time.sleep(10)
 
         # selecting only documents with status "ATIVO"
         page = BeautifulSoup(driver.page_source, 'lxml')
@@ -176,7 +183,7 @@ for cnpj in tqdm(lista_cnpjs):
                 year = balanco_atv.columns[2][-4:]
                 path2 = path + '/' + '{}'.format(year)
                 if os.path.exists(path2):
-                    continue
+                    pass
                 else:
                     os.mkdir(path2)
 

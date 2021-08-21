@@ -1,3 +1,4 @@
 .DS_store
 /venvmatheus
-/companies_data
+/venv_cvm
+.gitignore
