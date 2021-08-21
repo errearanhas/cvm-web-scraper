@@ -31,8 +31,8 @@ url = 'https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/CiaAb/FormBuscaCiaAb.
 driver.get(url)
 
 # set local download folder
-# downloadpath = '/Users/renatoaranha/downloads'
-downloadpath = '/Users/rlopesc/downloads'
+download_path = '/Users/renatoaranha/downloads'
+# download_path = '/Users/rlopesc/downloads'
 
 
 def click_change_window(link):
@@ -49,6 +49,13 @@ def click_change_window(link):
     return
 
 
+path0 = "./companies_data/"
+
+if os.path.exists(path0):
+    pass
+else:
+    os.mkdir(path0)
+
 for cnpj in tqdm(lista_cnpjs):
     current_cnpj = cnpj.replace(".", "").replace("/", "").replace("-", "")  # remove punctuation from cnpj
     driver.get(url)
@@ -59,6 +66,7 @@ for cnpj in tqdm(lista_cnpjs):
 
         cont = driver.find_element_by_id('btnContinuar')
         cont.click()
+        time.sleep(2)
 
         company_link = driver.find_element_by_id('dlCiasCdCVM__ctl1_Linkbutton1')
 
@@ -68,7 +76,7 @@ for cnpj in tqdm(lista_cnpjs):
         # path = 'C:\\Users\\Owner\\Desktop\\DFs\\{}'.format(company_name)
 
         if os.path.exists(path):
-            continue
+            pass
         else:
             os.mkdir(path)
 
@@ -84,33 +92,43 @@ for cnpj in tqdm(lista_cnpjs):
         dt_inicial = driver.find_element_by_id('txtDataIni')
         dt_inicial.clear()
         dt_inicial.send_keys('04/01/2010')
+        periodo.click()
 
         hr_inicial = driver.find_element_by_id('txtHoraIni')
         hr_inicial.clear()
         hr_inicial.send_keys('00:00')
+        periodo.click()
 
         dt_final = driver.find_element_by_id('txtDataFim')
         dt_final.clear()
         dt_final.send_keys('22/05/2020')
-
-        dt_ref = driver.find_element_by_id('txtDataReferencia')
-        dt_ref.clear()
-        dt_ref.send_keys('01/01/2010')
+        periodo.click()
 
         hr_final = driver.find_element_by_id('txtHoraFim')
         hr_final.send_keys('00:00')
         hr_final.click()
+        periodo.click()
+
+        dt_ref = driver.find_element_by_id('txtDataReferencia')
+        dt_ref.clear()
+        dt_ref.send_keys('01/01/2010')
+        periodo.click()
 
         # Categoria
-        categ_options = driver.find_element_by_id('cboCategoria')
+        # get and set category options
+        # categ_options = driver.find_element_by_id('cboCategoria')
+        categ_options = driver.find_element_by_id('cboCategorias')
         options = [i.get_attribute('text') for i in categ_options.find_elements_by_tag_name('option')]
-
         categ = driver.find_element_by_class_name('chosen-single')
         categ.click()
-        categ = driver.find_element_by_id('cboCategoria_chosen_input')
-        option = [i for i in options if i == 'Formulário de Referência'][0]
+        # categ = driver.find_element_by_id('cboCategoria_chosen_input')
+        categ = driver.find_element_by_class_name('chosen-search-input')
+        # option = [i for i in options if i == 'DFP'][0]
+        option = [i for i in options if 'Formulário de Referência' in i][0]
+
         categ.send_keys(option)
         categ.send_keys(Keys.RETURN)
+
 
         # Consulta
         consulta = driver.find_element_by_id('btnConsulta')
@@ -154,13 +172,13 @@ for cnpj in tqdm(lista_cnpjs):
         time.sleep(5)
         gerar_pdf = driver.find_element_by_id("btnConsulta")
         gerar_pdf.click()
-        time.sleep(20)
+        time.sleep(30)
 
         # renaming file and moving it to pertinet folder
         fname = re.sub('[^A-Za-z0-9]+', '', company_name) + ".pdf"
-        for i in os.listdir(downloadpath):
+        for i in os.listdir(download_path):
             if filename_prefix in i:
-                shutil.move(downloadpath + "/" + i,
+                shutil.move(download_path + "/" + i,
                             os.path.join(path, fname))
 
         time.sleep(5)
