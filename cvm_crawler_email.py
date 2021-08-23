@@ -15,7 +15,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 options = webdriver.ChromeOptions()
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-gpu')
-options.add_argument('--headless')
+# options.add_argument('--headless')
 
 driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 # driver = webdriver.Chrome("C:\\Users\\Owner\\PycharmProjects\\RicardoCardoso25052020\\chromedriver.exe",
@@ -39,10 +39,8 @@ nome1 = []
 email = []
 
 # cnpj = '42.771.949/0001-35'
-
 for cnpj in tqdm(lista_cnpjs):
-    razao_social = df.iloc[:, 0:].query(f"CNPJ == {cnpj}")['Razão Social']
-    print(f"collecting data from: {razao_social} ({cnpj})", end='\r')
+    print(f"collecting data from: {cnpj}", end='\r')
 
     current_cnpj_in_loop = cnpj.replace(".", "").replace("/", "").replace("-", "")
     try:
