@@ -39,9 +39,8 @@ nome1 = []
 email = []
 
 # cnpj = '42.771.949/0001-35'
-for cnpj in tqdm(lista_cnpjs):
-    print(f"collecting data from: {cnpj}", end='\r')
 
+for cnpj in tqdm(lista_cnpjs):
     current_cnpj_in_loop = cnpj.replace(".", "").replace("/", "").replace("-", "")
     try:
         field = driver.find_element_by_id('txtCNPJNome')
