@@ -88,7 +88,7 @@ for cnpj in tqdm(lista_cnpjs):
         periodo.click()
 
         data_final = driver.find_element_by_id('txtDataFim')
-        data_final.send_keys('14/04/2021')
+        data_final.send_keys('23/08/2021')
 
         hora_final = driver.find_element_by_id('txtHoraFim')
         hora_final.send_keys('00:00')
@@ -109,7 +109,7 @@ for cnpj in tqdm(lista_cnpjs):
         # Consulta
         consulta = driver.find_element_by_id('btnConsulta')
         consulta.click()
-        time.sleep(10)
+        time.sleep(15)
 
         page = BeautifulSoup(driver.page_source, 'lxml')
 
