@@ -8,6 +8,7 @@ import numpy as np
 from selenium.webdriver.support.ui import Select
 from bs4 import BeautifulSoup
 import time
+import os
 from tqdm import tqdm
 from unidecode import unidecode
 from webdriver_manager.chrome import ChromeDriverManager
@@ -15,7 +16,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 options = webdriver.ChromeOptions()
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-gpu')
-# options.add_argument('--headless')
+options.add_argument('--headless')
 
 driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 # driver = webdriver.Chrome("C:\\Users\\Owner\\PycharmProjects\\RicardoCardoso25052020\\chromedriver.exe",
@@ -34,9 +35,6 @@ df = pd.read_excel("Empresas_listadas_B3-CORRETO.xlsx")
 df.head()
 lista_cnpjs = df['CNPJ']
 lista_cnpjs_non_cap = []
-empresa = []
-nome1 = []
-email = []
 
 # cnpj = '42.771.949/0001-35'
 
@@ -54,7 +52,7 @@ for cnpj in tqdm(lista_cnpjs):
         time.sleep(timer)
 
         try:
-            nome = WebDriverWait(driver, timer).until(
+            company_link = WebDriverWait(driver, timer).until(
                 EC.presence_of_element_located((By.ID, 'dlCiasCdCVM__ctl1_Linkbutton1'))
             )
         except:
@@ -62,8 +60,10 @@ for cnpj in tqdm(lista_cnpjs):
             driver.get(url)
             continue
 
-        nome = driver.find_element_by_id('dlCiasCdCVM__ctl1_Linkbutton1')
-        nome.click()
+        company_link = driver.find_element_by_id('dlCiasCdCVM__ctl1_Linkbutton1')
+        company_name = unidecode(company_link.text)
+
+        company_link.click()
 
         try:
             wait_for_btnConsulta = WebDriverWait(driver, timer).until(
@@ -145,9 +145,6 @@ for cnpj in tqdm(lista_cnpjs):
         nm = unidecode(table.iloc[0, 1])
         mail = table.iloc[-1, 1]
 
-        nome1.append(nm)
-        email.append(mail)
-
         driver.switch_to.default_content()
 
         new_window = driver.window_handles[0]  # CHANGE TO PREVIOUS WINDOW
@@ -159,10 +156,25 @@ for cnpj in tqdm(lista_cnpjs):
         timer = np.random.randint(10, 20)
         time.sleep(timer)
 
-        company = driver.find_element_by_id('dlCiasCdCVM__ctl1_Linkbutton1')
-        empresa.append(unidecode(company.text))
+        file = "tabela_empresa_nomes.csv"
 
-        dtframe = pd.DataFrame({'empresa': empresa, 'nome': nome1, 'email': email})
+        if os.path.isfile(file):
+            dtframe = pd.read_csv('tabela_empresa_nomes.csv')
+
+            to_append = [company_name,
+                         nm,
+                         mail]
+
+            if (dtframe == to_append).all(1).any():  # checks if information already exists in table
+                pass
+            else:
+                series = pd.Series(to_append, index=dtframe.columns)
+                dtframe = dtframe.append(series, ignore_index=True)
+        else:
+            dtframe = pd.DataFrame({'empresa': [company_name],
+                                    'nome': [nm],
+                                    'email': [mail]})
+
         dtframe.to_csv('tabela_empresa_nomes.csv', index=False)
 
         driver.get(url)
