@@ -12,3 +12,5 @@ After installing the required packages (following _requirements.txt_ file) in an
 * _cvm_crawler_main.py_ to get companies files per year (folder _companies_data_)
 * _cvm_crawler_get_formulario.py_ to get companies pdfs (folder _companies_data_)
 * _cvm_craeler_email.py_ to get companies e-mails (file _tabela_empresa_nomes.csv_)
+
+p.s. the crawler is set to run Google Chrome web browser behind the scenes. So it is necessary to have Google Chrome locally installed.
