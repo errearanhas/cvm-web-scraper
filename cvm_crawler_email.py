@@ -19,8 +19,6 @@ options.add_argument('--disable-gpu')
 options.add_argument('--headless')
 
 driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
-# driver = webdriver.Chrome("C:\\Users\\Owner\\PycharmProjects\\RicardoCardoso25052020\\chromedriver.exe",
-#                           options=options)
 
 time.sleep(10)
 
@@ -29,12 +27,14 @@ time.sleep(10)
 url = 'https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/CiaAb/FormBuscaCiaAb.aspx?TipoConsult=c'
 driver.get(url)
 
-# Importing the database and making a list of the CNPJ
+# Importing the database and making a list of the CNPJs
 
 df = pd.read_excel("Empresas_listadas_B3-CORRETO.xlsx")
 df.head()
 lista_cnpjs = df['CNPJ']
 lista_cnpjs_non_cap = []
+
+file = 'tabela_empresa_nomes.csv'
 
 # cnpj = '42.771.949/0001-35'
 
@@ -48,7 +48,7 @@ for cnpj in tqdm(lista_cnpjs):
         cont = driver.find_element_by_id('btnContinuar')
         cont.click()
 
-        timer = np.random.randint(10, 20)
+        timer = np.random.randint(5, 15)
         time.sleep(timer)
 
         try:
@@ -62,6 +62,12 @@ for cnpj in tqdm(lista_cnpjs):
 
         company_link = driver.find_element_by_id('dlCiasCdCVM__ctl1_Linkbutton1')
         company_name = unidecode(company_link.text)
+
+        if os.path.isfile(file):  # checks if company already exists in table
+            dtframe = pd.read_csv(file)
+            if company_name in list(dtframe.empresa):
+                driver.get(url)
+                continue
 
         company_link.click()
 
@@ -156,10 +162,8 @@ for cnpj in tqdm(lista_cnpjs):
         timer = np.random.randint(10, 20)
         time.sleep(timer)
 
-        file = "tabela_empresa_nomes.csv"
-
         if os.path.isfile(file):
-            dtframe = pd.read_csv('tabela_empresa_nomes.csv')
+            dtframe = pd.read_csv(file)
 
             to_append = [company_name,
                          nm,
@@ -175,7 +179,7 @@ for cnpj in tqdm(lista_cnpjs):
                                     'nome': [nm],
                                     'email': [mail]})
 
-        dtframe.to_csv('tabela_empresa_nomes.csv', index=False)
+        dtframe.to_csv(file, index=False)
 
         driver.get(url)
         timer = np.random.randint(10, 20)
