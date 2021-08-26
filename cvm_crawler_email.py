@@ -34,10 +34,12 @@ df.head()
 lista_cnpjs = df['CNPJ']
 lista_cnpjs_non_cap = []
 
+# set parameters
 file = 'tabela_empresa_nomes.csv'
-
-# cnpj = '42.771.949/0001-35'
-# cnpj = '16.590.234/0001-76'
+file_failed = 'lista_cnpjs_non_cap.txt'
+timer = np.random.randint(15, 20)
+dt_inicio = '04/01/2010'
+dt_fim = '23/08/2021'
 
 for cnpj in tqdm(lista_cnpjs):
     current_cnpj_in_loop = cnpj.replace(".", "").replace("/", "").replace("-", "")
@@ -49,8 +51,6 @@ for cnpj in tqdm(lista_cnpjs):
         cont = driver.find_element_by_id('btnContinuar')
         cont.click()
 
-        timer = np.random.randint(10, 20)
-
         try:
             company_link = WebDriverWait(driver, timer).until(
                 EC.presence_of_element_located((By.ID, 'dlCiasCdCVM__ctl1_Linkbutton1'))
@@ -59,7 +59,7 @@ for cnpj in tqdm(lista_cnpjs):
             lista_cnpjs_non_cap.append(cnpj)
 
             # save file with no collected CNPJs
-            with open("lista_cnpjs_non_cap.txt", "w") as f:
+            with open(file_failed, "w") as f:
                 for s in lista_cnpjs_non_cap:
                     f.write(str(s) + '\n')
 
@@ -84,7 +84,7 @@ for cnpj in tqdm(lista_cnpjs):
             lista_cnpjs_non_cap.append(cnpj)
 
             # save file with no collected CNPJs
-            with open("lista_cnpjs_non_cap.txt", "w") as f:
+            with open(file_failed, "w") as f:
                 for s in lista_cnpjs_non_cap:
                     f.write(str(s) + '\n')
 
@@ -101,7 +101,7 @@ for cnpj in tqdm(lista_cnpjs):
         periodo.click()
 
         data_inicial = driver.find_element_by_id('txtDataIni')
-        data_inicial.send_keys('04/01/2010')
+        data_inicial.send_keys(dt_inicio)
         periodo.click()
 
         hora_inicial = driver.find_element_by_id('txtHoraIni')
@@ -109,7 +109,7 @@ for cnpj in tqdm(lista_cnpjs):
         periodo.click()
 
         data_final = driver.find_element_by_id('txtDataFim')
-        data_final.send_keys('23/08/2021')
+        data_final.send_keys(dt_fim)
 
         hora_final = driver.find_element_by_id('txtHoraFim')
         hora_final.send_keys('00:00')
@@ -129,7 +129,7 @@ for cnpj in tqdm(lista_cnpjs):
 
         consulta = driver.find_element_by_id('btnConsulta')
         consulta.click()
-        time.sleep(10)
+        time.sleep(5)
 
         page = BeautifulSoup(driver.page_source, 'lxml')
 
@@ -148,7 +148,7 @@ for cnpj in tqdm(lista_cnpjs):
 
         drop = Select(dados_gerais)
         drop.select_by_value(values[-2])  # value of DRI option
-        time.sleep(5)
+        time.sleep(3)
 
         page = BeautifulSoup(driver.page_source, 'lxml')
 
@@ -202,7 +202,7 @@ for cnpj in tqdm(lista_cnpjs):
         lista_cnpjs_non_cap.append(cnpj)
 
         # save file with no collected CNPJs
-        with open("lista_cnpjs_non_cap.txt", "w") as f:
+        with open(file_failed, "w") as f:
             for s in lista_cnpjs_non_cap:
                 f.write(str(s) + '\n')
 
