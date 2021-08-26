@@ -1,16 +1,16 @@
+import pandas as pd
+import numpy as np
+import time
+import os
+from tqdm import tqdm
+from unidecode import unidecode
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium import webdriver
-import pandas as pd
-import numpy as np
 from selenium.webdriver.support.ui import Select
 from bs4 import BeautifulSoup
-import time
-import os
-from tqdm import tqdm
-from unidecode import unidecode
 from webdriver_manager.chrome import ChromeDriverManager
 
 options = webdriver.ChromeOptions()
@@ -30,7 +30,6 @@ driver.get(url)
 # Importing the database and making a list of the CNPJs
 
 df = pd.read_excel("Empresas_listadas_B3-CORRETO.xlsx")
-df.head()
 lista_cnpjs = df['CNPJ']
 lista_cnpjs_non_cap = []
 
@@ -149,8 +148,6 @@ for cnpj in tqdm(lista_cnpjs):
         drop = Select(dados_gerais)
         drop.select_by_value(values[-2])  # value of DRI option
         time.sleep(3)
-
-        page = BeautifulSoup(driver.page_source, 'lxml')
 
         # switching to the iframe:
         driver.switch_to.frame(driver.find_element_by_tag_name("iframe"))
