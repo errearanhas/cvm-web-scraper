@@ -37,6 +37,7 @@ lista_cnpjs_non_cap = []
 file = 'tabela_empresa_nomes.csv'
 
 # cnpj = '42.771.949/0001-35'
+# cnpj = '16.590.234/0001-76'
 
 for cnpj in tqdm(lista_cnpjs):
     current_cnpj_in_loop = cnpj.replace(".", "").replace("/", "").replace("-", "")
@@ -48,19 +49,23 @@ for cnpj in tqdm(lista_cnpjs):
         cont = driver.find_element_by_id('btnContinuar')
         cont.click()
 
-        timer = np.random.randint(5, 15)
-        time.sleep(timer)
+        timer = np.random.randint(10, 20)
 
         try:
             company_link = WebDriverWait(driver, timer).until(
                 EC.presence_of_element_located((By.ID, 'dlCiasCdCVM__ctl1_Linkbutton1'))
             )
         except:
-            lista_cnpjs_non_cap.append(current_cnpj_in_loop)
+            lista_cnpjs_non_cap.append(cnpj)
+
+            # save file with no collected CNPJs
+            with open("lista_cnpjs_non_cap.txt", "w") as f:
+                for s in lista_cnpjs_non_cap:
+                    f.write(str(s) + '\n')
+
             driver.get(url)
             continue
 
-        company_link = driver.find_element_by_id('dlCiasCdCVM__ctl1_Linkbutton1')
         company_name = unidecode(company_link.text)
 
         if os.path.isfile(file):  # checks if company already exists in table
@@ -76,13 +81,23 @@ for cnpj in tqdm(lista_cnpjs):
                 EC.presence_of_element_located((By.ID, 'btnConsulta'))
             )
         except:
-            lista_cnpjs_non_cap.append(current_cnpj_in_loop)
+            lista_cnpjs_non_cap.append(cnpj)
+
+            # save file with no collected CNPJs
+            with open("lista_cnpjs_non_cap.txt", "w") as f:
+                for s in lista_cnpjs_non_cap:
+                    f.write(str(s) + '\n')
+
             driver.get(url)
             continue
 
-        time.sleep(10)
+        # time.sleep(10)
 
-        periodo = driver.find_element_by_id('rdPeriodo')
+        periodo = WebDriverWait(driver, timer).until(
+            EC.presence_of_element_located((By.ID, 'rdPeriodo'))
+        )
+
+        # periodo = driver.find_element_by_id('rdPeriodo')
         periodo.click()
 
         data_inicial = driver.find_element_by_id('txtDataIni')
@@ -112,14 +127,12 @@ for cnpj in tqdm(lista_cnpjs):
         categ.send_keys(option)
         categ.send_keys(Keys.RETURN)
 
-        # Consulta
         consulta = driver.find_element_by_id('btnConsulta')
         consulta.click()
-        time.sleep(15)
+        time.sleep(10)
 
         page = BeautifulSoup(driver.page_source, 'lxml')
 
-        # visus = driver.find_elements_by_id('VisualizarDocumento')
         j = driver.find_element_by_id('VisualizarDocumento')
         j.click()
         time.sleep(10)
@@ -159,13 +172,13 @@ for cnpj in tqdm(lista_cnpjs):
         driver.switch_to.window(new_window)
         driver.back()
 
-        timer = np.random.randint(10, 20)
         time.sleep(timer)
 
         if os.path.isfile(file):
             dtframe = pd.read_csv(file)
 
             to_append = [company_name,
+                         cnpj,
                          nm,
                          mail]
 
@@ -176,17 +189,23 @@ for cnpj in tqdm(lista_cnpjs):
                 dtframe = dtframe.append(series, ignore_index=True)
         else:
             dtframe = pd.DataFrame({'empresa': [company_name],
+                                    'cnpj': [cnpj],
                                     'nome': [nm],
                                     'email': [mail]})
 
         dtframe.to_csv(file, index=False)
 
         driver.get(url)
-        timer = np.random.randint(10, 20)
+
         time.sleep(timer)
     except:
-        lista_cnpjs_non_cap.append(current_cnpj_in_loop)
+        lista_cnpjs_non_cap.append(cnpj)
+
+        # save file with no collected CNPJs
+        with open("lista_cnpjs_non_cap.txt", "w") as f:
+            for s in lista_cnpjs_non_cap:
+                f.write(str(s) + '\n')
+
         driver.get(url)
-        timer = np.random.randint(10, 20)
         time.sleep(timer)
         continue
