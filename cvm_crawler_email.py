@@ -185,7 +185,7 @@ for cnpj in tqdm(lista_cnpjs):
                                     'nome': [nm],
                                     'email': [mail]})
 
-        dtframe.to_csv(file, index=False)
+        dtframe.to_csv(file, index=False, sep=';')
 
         driver.get(url)
 
