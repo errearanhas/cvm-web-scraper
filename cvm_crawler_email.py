@@ -91,13 +91,7 @@ for cnpj in tqdm(lista_cnpjs):
             driver.get(url)
             continue
 
-        # time.sleep(10)
-
-        periodo = WebDriverWait(driver, timer).until(
-            EC.presence_of_element_located((By.ID, 'rdPeriodo'))
-        )
-
-        # periodo = driver.find_element_by_id('rdPeriodo')
+        periodo = driver.find_element_by_id('rdPeriodo')
         periodo.click()
 
         data_inicial = driver.find_element_by_id('txtDataIni')
@@ -110,6 +104,7 @@ for cnpj in tqdm(lista_cnpjs):
 
         data_final = driver.find_element_by_id('txtDataFim')
         data_final.send_keys(dt_fim)
+        periodo.click()
 
         hora_final = driver.find_element_by_id('txtHoraFim')
         hora_final.send_keys('00:00')
@@ -121,21 +116,23 @@ for cnpj in tqdm(lista_cnpjs):
 
         categ = driver.find_element_by_class_name('chosen-single')
         categ.click()
+
         categ = driver.find_element_by_class_name('chosen-search-input')
         option = [i for i in options if 'Formulário Cadastral' in i][0]
 
         categ.send_keys(option)
         categ.send_keys(Keys.RETURN)
 
+        time.sleep(2)
+
         consulta = driver.find_element_by_id('btnConsulta')
         consulta.click()
+
         time.sleep(5)
 
-        page = BeautifulSoup(driver.page_source, 'lxml')
-
-        j = driver.find_element_by_id('VisualizarDocumento')
-        j.click()
-        time.sleep(10)
+        open_doc = driver.find_element_by_id('VisualizarDocumento')
+        open_doc.click()
+        time.sleep(5)
 
         # Change to control the second window that poped
 
@@ -147,7 +144,7 @@ for cnpj in tqdm(lista_cnpjs):
         values = [i.get_attribute("value") for i in dados_gerais.find_elements_by_tag_name("option")]
 
         drop = Select(dados_gerais)
-        drop.select_by_value(values[-2])  # value of DRI option
+        drop.select_by_value(values[-2])  # value of 'DRI+ou+pessoa+equiparada' option
         time.sleep(5)
 
         # switching to the iframe:
@@ -168,9 +165,6 @@ for cnpj in tqdm(lista_cnpjs):
 
         driver.close()
         driver.switch_to.window(new_window)
-        driver.back()
-
-        time.sleep(timer)
 
         if os.path.isfile(file):
             dtframe = pd.read_csv(file)
@@ -195,7 +189,7 @@ for cnpj in tqdm(lista_cnpjs):
 
         driver.get(url)
 
-        time.sleep(timer)
+        time.sleep(5)
     except:
         lista_cnpjs_non_cap.append(cnpj)
 
