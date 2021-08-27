@@ -27,13 +27,14 @@ time.sleep(10)
 url = 'https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/CiaAb/FormBuscaCiaAb.aspx?TipoConsult=c'
 driver.get(url)
 
-# Importing the database and making a list of the CNPJs
+# Import the database and get CNPJs
 
 df = pd.read_excel("Empresas_listadas_B3-CORRETO.xlsx")
 lista_cnpjs = df['CNPJ']
 lista_cnpjs_non_cap = []
 
 # set parameters
+
 file = 'tabela_empresa_nomes.csv'
 file_failed = 'lista_cnpjs_non_cap.txt'
 timer = np.random.randint(15, 20)
@@ -41,7 +42,7 @@ dt_inicio = '04/01/2010'
 dt_fim = '23/08/2021'
 
 for cnpj in tqdm(lista_cnpjs):
-    current_cnpj_in_loop = cnpj.replace(".", "").replace("/", "").replace("-", "")
+    current_cnpj_in_loop = cnpj.replace(".", "").replace("/", "").replace("-", "").strip()
     try:
         field = driver.find_element_by_id('txtCNPJNome')
         field.clear()
@@ -147,7 +148,7 @@ for cnpj in tqdm(lista_cnpjs):
 
         drop = Select(dados_gerais)
         drop.select_by_value(values[-2])  # value of DRI option
-        time.sleep(3)
+        time.sleep(5)
 
         # switching to the iframe:
         driver.switch_to.frame(driver.find_element_by_tag_name("iframe"))
