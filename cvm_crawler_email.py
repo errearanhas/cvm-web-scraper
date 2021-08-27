@@ -36,7 +36,7 @@ lista_cnpjs_non_cap = []
 # set parameters
 
 file = 'tabela_empresa_nomes.csv'
-file_failed = 'lista_cnpjs_non_cap.txt'
+file_failed = 'list_cnpjs_non_collected.txt'
 timer = np.random.randint(15, 20)
 dt_inicio = '04/01/2010'
 dt_fim = '23/08/2021'
